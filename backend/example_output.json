@@ -1,0 +1,58 @@
+{
+  "video_path": "uploads/a_roll_video.mp4",
+  "segments": [
+    {
+      "start_time": 0.0,
+      "end_time": 3.5,
+      "text": "Welcome to today's tutorial on smart video editing."
+    },
+    {
+      "start_time": 3.5,
+      "end_time": 7.2,
+      "text": "We'll be exploring how AI can help automate the B-roll insertion process."
+    },
+    {
+      "start_time": 7.2,
+      "end_time": 11.8,
+      "text": "First, let's understand what makes a good B-roll clip."
+    },
+    {
+      "start_time": 11.8,
+      "end_time": 15.4,
+      "text": "B-roll should complement your main content and add visual interest."
+    },
+    {
+      "start_time": 15.4,
+      "end_time": 19.1,
+      "text": "Now, let's see how our system analyzes your A-roll content."
+    },
+    {
+      "start_time": 19.1,
+      "end_time": 23.7,
+      "text": "The AI identifies natural pause points and topic transitions."
+    },
+    {
+      "start_time": 23.7,
+      "end_time": 27.3,
+      "text": "This allows for seamless B-roll insertion at the perfect moments."
+    },
+    {
+      "start_time": 27.3,
+      "end_time": 31.0,
+      "text": "Let's take a look at the product demonstration."
+    },
+    {
+      "start_time": 31.0,
+      "end_time": 35.6,
+      "text": "As you can see, the interface is intuitive and user-friendly."
+    },
+    {
+      "start_time": 35.6,
+      "end_time": 40.2,
+      "text": "The timeline view shows exactly where each B-roll clip will be placed."
+    }
+  ],
+  "total_segments": 10,
+  "total_duration": 40.2
+}
+

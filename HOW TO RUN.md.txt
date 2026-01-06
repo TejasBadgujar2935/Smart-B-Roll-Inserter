@@ -1,0 +1,16 @@
+cd frontend
+npm install
+npm run dev
+
+
+http://localhost:3000
+
+
+
+Backend server start karo
+python -m uvicorn app.main:app --reload
+
+
+Application startup complete.
+
+http://127.0.0.1:8000

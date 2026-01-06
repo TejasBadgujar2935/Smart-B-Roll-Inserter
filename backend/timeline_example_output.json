@@ -1,0 +1,147 @@
+{
+  "timeline_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "created_at": "2024-01-15T10:30:00.000000Z",
+  "source_video": "uploads/a_roll_video.mp4",
+  "total_duration": 40.2,
+  "segments": [
+    {
+      "type": "a_roll",
+      "start_time": 0.0,
+      "end_time": 27.3,
+      "duration": 27.3,
+      "source": "a_roll_video",
+      "transcript": "Welcome to today's tutorial on smart video editing. We'll be exploring how AI can help automate the B-roll insertion process. First, let's understand what makes a good B-roll clip. B-roll should complement your main content and add visual interest. Now, let's see how our system analyzes your A-roll content. The AI identifies natural pause points and topic transitions. This allows for seamless B-roll insertion at the perfect moments."
+    },
+    {
+      "type": "b_roll",
+      "start_time": 27.3,
+      "end_time": 31.0,
+      "duration": 3.7,
+      "source": "broll_1",
+      "insertion_reason": "Highly relevant match: both mention 'product'",
+      "confidence": 0.856,
+      "matching_segment": {
+        "text": "Let's take a look at the product demonstration.",
+        "start_time": 27.3,
+        "end_time": 31.0
+      }
+    },
+    {
+      "type": "b_roll",
+      "start_time": 31.0,
+      "end_time": 35.6,
+      "duration": 4.6,
+      "source": "broll_1",
+      "insertion_reason": "Highly relevant match: both mention 'interface'",
+      "confidence": 0.823,
+      "matching_segment": {
+        "text": "As you can see, the interface is intuitive and user-friendly.",
+        "start_time": 31.0,
+        "end_time": 35.6
+      }
+    },
+    {
+      "type": "b_roll",
+      "start_time": 35.6,
+      "end_time": 40.2,
+      "duration": 4.6,
+      "source": "broll_4",
+      "insertion_reason": "Relevant match: both mention 'analytics'",
+      "confidence": 0.791,
+      "matching_segment": {
+        "text": "The timeline view shows exactly where each B-roll clip will be placed.",
+        "start_time": 35.6,
+        "end_time": 40.2
+      }
+    }
+  ],
+  "statistics": {
+    "total_duration": 40.2,
+    "original_aroll_duration": 40.2,
+    "aroll_duration": 27.3,
+    "broll_duration": 12.9,
+    "aroll_segments": 2,
+    "broll_insertions": 3,
+    "broll_coverage_percent": 32.1,
+    "average_confidence": 0.823,
+    "total_segments": 4
+  },
+  "debug_info": {
+    "original_aroll_segments": 10,
+    "broll_matches_found": 3,
+    "timeline_segments_created": 4,
+    "aroll_segments": [
+      {
+        "start_time": 0.0,
+        "end_time": 3.5,
+        "text": "Welcome to today's tutorial on smart video editing."
+      },
+      {
+        "start_time": 3.5,
+        "end_time": 7.2,
+        "text": "We'll be exploring how AI can help automate the B-roll insertion process."
+      },
+      {
+        "start_time": 7.2,
+        "end_time": 11.8,
+        "text": "First, let's understand what makes a good B-roll clip."
+      },
+      {
+        "start_time": 11.8,
+        "end_time": 15.4,
+        "text": "B-roll should complement your main content and add visual interest."
+      },
+      {
+        "start_time": 15.4,
+        "end_time": 19.1,
+        "text": "Now, let's see how our system analyzes your A-roll content."
+      },
+      {
+        "start_time": 19.1,
+        "end_time": 23.7,
+        "text": "The AI identifies natural pause points and topic transitions."
+      },
+      {
+        "start_time": 23.7,
+        "end_time": 27.3,
+        "text": "This allows for seamless B-roll insertion at the perfect moments."
+      },
+      {
+        "start_time": 27.3,
+        "end_time": 31.0,
+        "text": "Let's take a look at the product demonstration."
+      },
+      {
+        "start_time": 31.0,
+        "end_time": 35.6,
+        "text": "As you can see, the interface is intuitive and user-friendly."
+      },
+      {
+        "start_time": 35.6,
+        "end_time": 40.2,
+        "text": "The timeline view shows exactly where each B-roll clip will be placed."
+      }
+    ],
+    "broll_insertions": [
+      {
+        "broll_id": "broll_1",
+        "at_time": 27.3,
+        "confidence": 0.856,
+        "reason": "Highly relevant match: both mention 'product'"
+      },
+      {
+        "broll_id": "broll_1",
+        "at_time": 31.0,
+        "confidence": 0.823,
+        "reason": "Highly relevant match: both mention 'interface'"
+      },
+      {
+        "broll_id": "broll_4",
+        "at_time": 35.6,
+        "confidence": 0.791,
+        "reason": "Relevant match: both mention 'analytics'"
+      }
+    ]
+  }
+}
+

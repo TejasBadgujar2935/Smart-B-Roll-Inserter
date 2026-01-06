@@ -1,0 +1,50 @@
+.video-uploader {
+  margin-bottom: 18px;
+}
+
+/* Upload card with subtle 3D + hover lift (UI-only) */
+.upload-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px dashed rgba(148, 163, 184, 0.9);
+  border-radius: 14px;
+  cursor: pointer;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.02), rgba(15, 23, 42, 0.05));
+  color: #0f172a;
+  transition:
+    border-color 200ms ease,
+    background 200ms ease,
+    box-shadow 220ms ease,
+    transform 180ms ease;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.18);
+}
+
+.upload-label:hover {
+  border-color: #4f46e5;
+  background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.1), rgba(15, 23, 42, 0.03));
+  box-shadow: 0 16px 30px rgba(79, 70, 229, 0.3);
+  transform: translateY(-1px);
+}
+
+.upload-label span:first-child {
+  font-weight: 600;
+  min-width: 130px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #111827;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-name {
+  color: #4b5563;
+  font-style: italic;
+  font-size: 13px;
+}
+

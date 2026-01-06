@@ -1,0 +1,217 @@
+.broll-metadata-input {
+  margin-bottom: 20px;
+}
+
+/* Form card with soft depth */
+.metadata-form {
+  background: rgba(15, 23, 42, 0.02);
+  padding: 14px 14px 16px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  border-radius: 14px;
+  margin-bottom: 16px;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.18);
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 9px 11px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.9);
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 120ms ease;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 64px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow:
+    0 0 0 1px rgba(79, 70, 229, 0.5),
+    0 10px 18px rgba(79, 70, 229, 0.14);
+  transform: translateY(-1px);
+}
+
+.form-row-small {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.form-input-small {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.92);
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 120ms ease;
+}
+
+.form-input-small:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 1px rgba(79, 70, 229, 0.45);
+  transform: translateY(-1px);
+}
+
+/* Primary Add button (CTA) */
+.add-button {
+  padding: 9px 22px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 16px 30px rgba(76, 81, 191, 0.4);
+  transition:
+    transform 160ms ease,
+    box-shadow 200ms ease,
+    filter 200ms ease;
+}
+
+.add-button:hover {
+  filter: brightness(1.02);
+  transform: translateY(-1px);
+  box-shadow: 0 20px 38px rgba(76, 81, 191, 0.55);
+}
+
+.add-button:active {
+  transform: translateY(0);
+  box-shadow: 0 12px 24px rgba(76, 81, 191, 0.35);
+}
+
+/* B-roll list card */
+.metadata-list {
+  background: rgba(15, 23, 42, 0.02);
+  padding: 14px 14px 16px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  border-radius: 14px;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.18);
+}
+
+.metadata-list h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #111827;
+}
+
+.empty-message {
+  color: #9ca3af;
+  font-style: italic;
+  text-align: center;
+  padding: 16px;
+  font-size: 13px;
+}
+
+.metadata-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Individual B-roll card with hover lift */
+.metadata-item {
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.96), rgba(241, 245, 249, 0.98));
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
+  transition:
+    box-shadow 220ms ease,
+    transform 180ms ease,
+    border-color 200ms ease;
+}
+
+.metadata-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.22);
+  border-color: rgba(79, 70, 229, 0.5);
+}
+
+.metadata-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.metadata-item-header strong {
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #111827;
+}
+
+/* Minimal red remove pill */
+.remove-button {
+  padding: 4px 10px;
+  background: rgba(248, 113, 113, 0.08);
+  color: #b91c1c;
+  border: 1px solid rgba(248, 113, 113, 0.5);
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition:
+    background 180ms ease,
+    transform 120ms ease,
+    box-shadow 180ms ease;
+}
+
+.remove-button:hover {
+  background: rgba(248, 113, 113, 0.14);
+  box-shadow: 0 8px 18px rgba(248, 113, 113, 0.35);
+  transform: translateY(-1px);
+}
+
+.metadata-item-content {
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.metadata-item-content div {
+  margin-bottom: 3px;
+}
+
+.metadata-item-content strong {
+  font-weight: 600;
+  color: #111827;
+}
+

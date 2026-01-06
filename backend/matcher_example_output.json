@@ -1,0 +1,32 @@
+{
+  "matches": [
+    {
+      "start_sec": 27.3,
+      "duration_sec": 3.7,
+      "broll_id": "broll_1",
+      "confidence": 0.856,
+      "reason": "Highly relevant match: both mention 'product'"
+    },
+    {
+      "start_sec": 31.0,
+      "duration_sec": 4.6,
+      "broll_id": "broll_1",
+      "confidence": 0.823,
+      "reason": "Highly relevant match: both mention 'interface'"
+    },
+    {
+      "start_sec": 35.6,
+      "duration_sec": 4.6,
+      "broll_id": "broll_4",
+      "confidence": 0.791,
+      "reason": "Relevant match: both mention 'analytics'"
+    }
+  ],
+  "total_matches": 3,
+  "settings": {
+    "similarity_threshold": 0.72,
+    "min_insertions": 3,
+    "max_insertions": 6
+  }
+}
+

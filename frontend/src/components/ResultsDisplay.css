@@ -1,0 +1,140 @@
+.results-display {
+  background: linear-gradient(135deg, #020617, #111827);
+  border-radius: 18px;
+  padding: 20px 20px 22px;
+  margin-top: 4px;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(129, 140, 248, 0.5);
+  color: #e5e7eb;
+  animation: results-card-fade-in 320ms ease-out;
+}
+
+.results-display h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #e5e7eb;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.results-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+  padding: 14px;
+  background: radial-gradient(circle at top left, rgba(31, 41, 55, 0.85), rgba(15, 23, 42, 0.95));
+  border-radius: 12px;
+}
+
+.summary-item {
+  font-size: 13px;
+  color: #e5e7eb;
+}
+
+.summary-item strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #9ca3af;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Pills-style tabs */
+.tabs {
+  display: inline-flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 4px;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 999px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+}
+
+.tab {
+  padding: 7px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  color: #9ca3af;
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 120ms ease;
+}
+
+.tab:hover {
+  color: #e5e7eb;
+}
+
+.tab.active {
+  color: #e5e7eb;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  transform: translateY(-1px);
+}
+
+.tab-content {
+  min-height: 260px;
+}
+
+.json-display {
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: 12px;
+  padding: 14px;
+  overflow-x: auto;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+}
+
+.json-display pre {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #e5e7eb;
+}
+
+.transcript-display {
+  padding: 8px 2px 2px;
+}
+
+.transcript-segments {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.transcript-segment {
+  border-left: 3px solid #4f46e5;
+  padding-left: 14px;
+  padding-bottom: 12px;
+}
+
+.segment-time {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-bottom: 3px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.segment-text {
+  font-size: 13px;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+@keyframes results-card-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

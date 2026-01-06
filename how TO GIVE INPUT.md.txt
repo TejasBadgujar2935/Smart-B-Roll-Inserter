@@ -1,0 +1,35 @@
+Step 1: A-Roll Video Upload
+
+Format: .mp4, .mov, .avi
+
+Example: a_roll.mp4
+
+Ye main talking video hota hai
+
+Step 2: B-Roll Metadata Add Karo
+
+User manually metadata add karta hai (video upload nahi).
+
+Example (1 B-roll input):
+
+Title: Uncovered Street Food
+Description: Street food exposed to dust and open air
+Category: Food Safety
+Subject: Street Food
+Action: Display
+Location: Mumbai
+Mood: Concern
+
+best 5–6 B-rolls add karo.
+Recommended values:
+
+Similarity Threshold: 0.70
+Min Insertions: 3
+Max Insertions: 6
+
+
+Step 4: Generate Timeline
+
+Click:
+
+Generate Timeline

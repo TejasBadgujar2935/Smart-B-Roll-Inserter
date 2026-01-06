@@ -1,0 +1,86 @@
+Example FFmpeg Command for B-Roll Overlay
+
+This example shows how ffmpeg overlays B-roll videos on A-roll at specific timestamps
+while keeping A-roll audio intact.
+
+Basic Structure:
+--------------
+ffmpeg \
+  -i a_roll_video.mp4 \
+  -i broll_1.mp4 \
+  -i broll_2.mp4 \
+  -filter_complex \
+    "[0:v][1:v]overlay=0:0:enable='between(t,27.3,31.0)'[v1]; \
+     [v1][2:v]overlay=0:0:enable='between(t,31.0,35.6)'[v2]" \
+  -map "[v2]" \
+  -map 0:a:0 \
+  -c:v libx264 \
+  -preset medium \
+  -crf 23 \
+  -c:a copy \
+  -y output.mp4
+
+Explanation:
+-----------
+- Input 0: A-roll video (with audio)
+- Input 1: B-roll 1 video
+- Input 2: B-roll 2 video
+
+Filter Complex:
+- [0:v][1:v]overlay=0:0:enable='between(t,27.3,31.0)'[v1]
+  → Overlay broll_1 from 27.3s to 31.0s on A-roll video
+  
+- [v1][2:v]overlay=0:0:enable='between(t,31.0,35.6)'[v2]
+  → Overlay broll_2 from 31.0s to 35.6s on previous result
+
+Mapping:
+- -map "[v2]": Use final video output
+- -map 0:a:0: Use A-roll audio (unchanged)
+
+Encoding:
+- -c:v libx264: H.264 video codec
+- -preset medium: Encoding speed/quality balance
+- -crf 23: Quality setting (lower = better quality)
+- -c:a copy: Copy audio without re-encoding (faster, preserves quality)
+
+Real Example with 3 B-rolls:
+---------------------------
+ffmpeg \
+  -i a_roll_video.mp4 \
+  -i brolls/broll_1.mp4 \
+  -i brolls/broll_1.mp4 \
+  -i brolls/broll_4.mp4 \
+  -filter_complex \
+    "[0:v][1:v]overlay=0:0:enable='between(t,27.3,31.0)'[v1]; \
+     [v1][2:v]overlay=0:0:enable='between(t,31.0,35.6)'[v2]; \
+     [v2][3:v]overlay=0:0:enable='between(t,35.6,40.2)'[v3]" \
+  -map "[v3]" \
+  -map 0:a:0 \
+  -c:v libx264 \
+  -preset medium \
+  -crf 23 \
+  -c:a copy \
+  -y rendered_output.mp4
+
+Notes:
+------
+1. A-roll audio (0:a:0) is always used, never re-encoded
+2. B-roll videos overlay at fullscreen (0:0 position)
+3. enable='between(t,start,end)' controls when overlay is active
+4. Each overlay creates a new video stream [v1], [v2], [v3], etc.
+5. Final output uses the last video stream
+6. -y flag overwrites output file if it exists
+
+Alternative: Picture-in-Picture Overlay
+--------------------------------------
+To overlay B-roll in a corner instead of fullscreen:
+
+[0:v][1:v]overlay=W-w-10:H-h-10:enable='between(t,27.3,31.0)'[v1]
+  → Overlay at bottom-right corner (10px padding)
+
+[0:v][1:v]overlay=10:10:enable='between(t,27.3,31.0)'[v1]
+  → Overlay at top-left corner (10px padding)
+
+[0:v][1:v]overlay=(W-w)/2:(H-h)/2:enable='between(t,27.3,31.0)'[v1]
+  → Overlay centered
+
